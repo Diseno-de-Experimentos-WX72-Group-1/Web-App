@@ -4,13 +4,22 @@ import 'primeicons/primeicons.css'
 import VueMq from 'vue3-mq'
 
 import PrimeVue from "primevue/config";
+import Aura from '@primevue/themes/aura';
+import Card from 'primevue/card';
+import Button from "primevue/button";
 
 import { createApp } from 'vue'
 import App from './App.vue'
 
 const app = createApp(App);
 
-app.use(PrimeVue);
+app.use(PrimeVue, {
+    theme: {
+        preset: Aura
+    }
+});
+app.component('pv-card', Card);
+app.component('pv-button', Button);
 
 app.use(VueMq, {
     breakpoints: {
