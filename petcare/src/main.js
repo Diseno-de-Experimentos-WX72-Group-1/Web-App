@@ -5,12 +5,19 @@ import VueMq from 'vue3-mq'
 
 import PrimeVue from "primevue/config";
 
-import { createApp } from 'vue'
-import App from './App.vue'
+    import { createApp } from 'vue'
+    import App from './App.vue'
+    import PrimeVue from "primevue/config";
+    import Button from "primevue/button";
+    import Toolbar from "primevue/toolbar";
+    import InputText from "primevue/inputtext";
+    import InputMask from 'primevue/inputmask'
+    import Select from "primevue/select";
+    import Dropdown from "primevue/dropdown";
+
+    import router from "@/router/index.js";
 
 const app = createApp(App);
-
-app.use(PrimeVue);
 
 app.use(VueMq, {
     breakpoints: {
@@ -20,4 +27,14 @@ app.use(VueMq, {
     },
     defaultBreakpoint: 'sm',
 });
-app.mount('#app');
+
+    app.use(PrimeVue); // inyección de depencias
+    app.use(router)
+
+    app.component('pv-button',Button)
+    app.component('pv-toolbar', Toolbar)
+    app.component('pv-input-text', InputText)
+    app.component('pv-input-mask', InputMask)
+    app.component('pv-select', Select)
+
+    app.mount('#app')
