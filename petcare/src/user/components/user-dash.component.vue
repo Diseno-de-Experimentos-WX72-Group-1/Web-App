@@ -12,7 +12,7 @@
       <pv-card style="width: 25rem; overflow: hidden">
         <template #title>Programación de Citas</template>
         <template #content>
-          <img alt="user header" src="https://primefaces.org/cdn/primevue/images/usercard.png" />
+          <img alt="user header" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYLrFqQ_PFox-lTib0X48RyWY1zbZzgMwfdw&s" />
           <p class="m-0">
             Programa fácilmente las citas con tu veterinario y recibe recordatorios automáticos.
           </p>
@@ -28,7 +28,7 @@
       <pv-card style="width: 25rem; overflow: hidden">
         <template #title>Servicios a domicilio</template>
         <template #content>
-          <img alt="user header" src="https://primefaces.org/cdn/primevue/images/usercard.png" />
+          <img alt="user header" src="https://img.freepik.com/vector-gratis/ilustracion-dibujos-animados-veterinario-dibujado-mano_52683-132120.jpg" />
           <p class="m-0">
             Solicita servicios veterinarios a domicilio para la comidad de tu mascota.
           </p>
@@ -44,7 +44,7 @@
       <pv-card style="width: 25rem; overflow: hidden">
         <template #title>Historial Médico</template>
         <template #content>
-          <img alt="user header" src="https://primefaces.org/cdn/primevue/images/usercard.png" />
+          <img alt="user header" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpkrY55fg8_Y4cdyFqCT0nZjcLjKVbMSrjCQ&s" />
           <p class="m-0">
             Accede al historial médico de tu mascota y lleva un control de sus tratamientos.
           </p>

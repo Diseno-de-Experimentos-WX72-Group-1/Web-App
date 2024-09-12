@@ -53,7 +53,7 @@ export default {
 
       </div>
       <div class="button-container">
-        <RouterLink to="/">
+        <RouterLink to="/user-dashboard">
           <pv-button id="btSignup" class="signup-button">Registrarse</pv-button>
         </RouterLink>
       </div>

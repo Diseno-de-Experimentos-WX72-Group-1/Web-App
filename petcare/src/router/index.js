@@ -5,7 +5,7 @@ import LoginVeterinarianComponent from "@/core/public/components/login-veterinar
 import LoginUserComponent from "@/core/public/components/login-user-component.vue";
 import SignupComponent from "@/core/public/components/signup-component.vue";
 import MainHomeComponent from "@/core/public/components/main-home-component.vue";
-
+import UserDash from '@/user/components/user-dash.component.vue'
 
 
 
@@ -15,8 +15,8 @@ const routes = [
     { path: '/login-veterinarian', component: LoginVeterinarianComponent},
     { path: '/login-user', component: LoginUserComponent},
     { path: '/signup', component: SignupComponent},
-    { path: '/:pathMatch(.*)*', component: NotFoundComponent }
-
+    { path: '/:pathMatch(.*)*', component: NotFoundComponent },
+    { path: '/user-dashboard', component: UserDash},
 
 ]
 
