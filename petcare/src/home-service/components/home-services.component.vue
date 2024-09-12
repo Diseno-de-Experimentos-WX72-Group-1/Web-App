@@ -3,6 +3,25 @@
 </script>
 
 <template>
+  <h1>Servicios a Domicilio</h1>
+  <div class="servicio flex flex-row flex-wrap gap-4 p-4 my-3 ">
+    <div class="flex align-items-center justify-content-center">
+      <img alt="user header" src="https://primefaces.org/cdn/primevue/images/usercard.png" />
+    </div>
+    <div class="flex flex-column">
+      <h2>Consulta Veterinaria a Domicilio</h2>
+      <p>Ofrecemos consultas veterinarias en la comodidad de tu hogar. </p>
+    </div>
+  </div>
+  <div class="servicio flex flex-row flex-wrap gap-4 p-4 my-3">
+    <div class="flex align-items-center justify-content-center">
+      <img alt="user header" src="https://primefaces.org/cdn/primevue/images/usercard.png" />
+    </div>
+    <div class="flex flex-column">
+      <h2>Aseo y cuidado a Domicilio</h2>
+      <p>Disfruta de servicios de aseo y cuidado para tus mascotas sin salir de casa. </p>
+    </div>
+  </div>
   <div class="form p-4">
     <h2>Solicita un Servicio</h2>
     <div class="field">
@@ -32,11 +51,11 @@
 </template>
 
 <style scoped>
-h2 {
+h1, h2 {
   color: #007bff;
 }
 
-.form {
+.form, .servicio {
   background-color: #F6F7F9;
 }
 

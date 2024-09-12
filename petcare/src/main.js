@@ -26,7 +26,7 @@ app.use(VueMq, {
     defaultBreakpoint: 'sm',
 });
 
-    app.use(PrimeVue); // inyección de depencias
+    app.use(PrimeVue);
     app.use(router)
 
     app.component('pv-button',Button)
