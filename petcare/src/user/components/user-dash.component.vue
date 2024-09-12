@@ -28,7 +28,7 @@
       <pv-card style="width: 25rem; overflow: hidden">
         <template #title>Servicios a domicilio</template>
         <template #content>
-          <img alt="user header" src="https://img.freepik.com/vector-gratis/ilustracion-dibujos-animados-veterinario-dibujado-mano_52683-132120.jpg" />
+          <img alt="user header" class="small-image"  src="https://static.vecteezy.com/system/resources/previews/004/808/886/non_2x/little-cute-animal-doctor-veterinarian-dog-puppy-cartoon-pet-health-care-vector.jpg" />
           <p class="m-0">
             Solicita servicios veterinarios a domicilio para la comidad de tu mascota.
           </p>
@@ -60,5 +60,11 @@
 </template>
 
 <style scoped>
-
+h1{
+  color : #376eec;
+}
+.small-image {
+  width: 200px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
 </style>
