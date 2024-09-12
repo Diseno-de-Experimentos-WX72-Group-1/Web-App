@@ -57,6 +57,13 @@ export default {
           <pv-button id="btSignup" class="signup-button">Registrarse</pv-button>
         </RouterLink>
       </div>
+      <div class="button-return">
+        <RouterLink to="/">
+          <span>Regresar</span>
+        </RouterLink>
+      </div>
+
+
     </div>
   </div>
 </template>
@@ -126,5 +133,12 @@ export default {
 .signup-button:hover {
   background-color: white;
   color: #007bff;
+}
+
+.button-return {
+  display: flex;
+  justify-content: flex-end; /* Alinea el contenido a la derecha */
+  font-size: 1rem;
+  margin-top: 10px; /* Espacio superior para separar del campo de entrada */
 }
 </style>

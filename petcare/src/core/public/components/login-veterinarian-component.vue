@@ -2,7 +2,7 @@
 //import {AuthApiService} from "@/services/aut-api.service.js";
 
 export default {
-  //name: 'login',
+  name: 'login-veterinarian',
   data() {
     return {
       email: '',
@@ -47,7 +47,7 @@ export default {
   <div class="container">
     <div class="login-box">
       <div class="login-title">
-        <h1>Iniciar Sesión en Pet&Care</h1>
+        <h1>Bienvenido Veterinario Pet&Care</h1>
       </div>
       <div class="row">
         <label>Correo Electrónico</label><br />
@@ -55,8 +55,8 @@ export default {
         <label>Contraseña</label><br/>
         <pv-input-text id="password" type="password" v-model="password" class="input-field"></pv-input-text><br/>
         <div class="register-link">
-          <RouterLink to="signup">
-            <span>Regístrate aquí</span>
+          <RouterLink to="/">
+            <span>Regresar</span>
           </RouterLink>
         </div>
       </div>
@@ -78,19 +78,19 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 85vh; /* Centrado vertical y horizontal */
+  height: 85vh;
   background-color: #f0f0f0;
 
 }
 
 .login-box {
-  display: inline-block; /* Ajusta el tamaño del cuadro al contenido */
+  display: inline-block;
   background-color: white;
   padding: 5rem;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center; /* Centrar texto dentro del login-box */
-  min-width: 300px; /* Define un ancho mínimo para evitar que sea demasiado estrecho */
+  text-align: center;
+  min-width: 300px;
 }
 
 .login-title h1 {
@@ -115,9 +115,9 @@ export default {
 }
 .register-link {
   display: flex;
-  justify-content: flex-end; /* Alinea el contenido a la derecha */
+  justify-content: flex-end;
   font-size: 1rem;
-  margin-top: 10px; /* Espacio superior para separar del campo de entrada */
+  margin-top: 10px;
 }
 
 span{

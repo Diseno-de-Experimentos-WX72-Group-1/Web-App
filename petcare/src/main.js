@@ -8,13 +8,12 @@
     import InputText from "primevue/inputtext";
     import InputMask from 'primevue/inputmask'
     import Select from "primevue/select";
-    import Dropdown from "primevue/dropdown";
 
     import router from "@/router/index.js";
 
     const app = createApp(App);
 
-    app.use(PrimeVue); // inyección de depencias
+    app.use(PrimeVue);
     app.use(router)
 
     app.component('pv-button',Button)
