@@ -11,6 +11,7 @@ import Toolbar from "primevue/toolbar";
 import InputText from "primevue/inputtext";
 import InputMask from 'primevue/inputmask'
 import Select from "primevue/select";
+import Card from 'primevue/card';
 import Dropdown from "primevue/dropdown";
 
 import router from "@/router/index.js";
@@ -34,5 +35,6 @@ app.component('pv-toolbar', Toolbar)
 app.component('pv-input-text', InputText)
 app.component('pv-input-mask', InputMask)
 app.component('pv-select', Select)
+app.component('pv-card', Card);
 
 app.mount('#app')
