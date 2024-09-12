@@ -13,7 +13,6 @@ import PrimeVue from "primevue/config";
     import InputText from "primevue/inputtext";
     import InputMask from 'primevue/inputmask'
     import Select from "primevue/select";
-    import Dropdown from "primevue/dropdown";
 
     import router from "@/router/index.js";
 
@@ -28,7 +27,7 @@ app.use(VueMq, {
     defaultBreakpoint: 'sm',
 });
 
-    app.use(PrimeVue); // inyección de depencias
+    app.use(PrimeVue);
     app.use(router)
 
     app.component('pv-button',Button)
