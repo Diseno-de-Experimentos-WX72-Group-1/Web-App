@@ -44,7 +44,7 @@
           <img alt="user header" src="https://primefaces.org/cdn/primevue/images/usercard.png" />
           <div class="doctor">
             <h1>Dra. Rodríguez </h1>
-            <div class="flex flex-row flex-wrap justify-content-centergap-1">
+            <div class="flex flex-row flex-wrap justify-content-center gap-1">
               <p>
                 Fecha:
               </p>

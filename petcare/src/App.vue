@@ -1,9 +1,9 @@
 <script setup>
-import TheAppointment from './Appointment/Components/the-appointment.component.vue'
+
 </script>
 
 <template>
-  <the-appointment/>
+  <router-view></router-view>
 </template>
 
 <style scoped>

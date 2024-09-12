@@ -19,9 +19,7 @@
         </template>
         <template #footer>
           <div class="flex gap-4 mt-1">
-            <RouterLink to="/">
               <pv-button label="Programar cita" class="pvbutton w-full" />
-            </RouterLink>>
           </div>
         </template>
       </pv-card>
@@ -37,9 +35,7 @@
         </template>
         <template #footer>
           <div class="flex gap-4 mt-1">
-            <RouterLink to="/">
               <pv-button label="Servicio a Domicilio" class="pvbutton w-full" />
-            </RouterLink>
           </div>
         </template>
       </pv-card>
