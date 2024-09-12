@@ -8,7 +8,7 @@
     <p>Gestiona citas veterinarias, recibe recordatorios automáticos y accede a servicios a domicilio con Pet&Care.</p>
   </div>
   <div class="flex flex-row flex-wrap justify-content-center gap-3 py-5">
-    <div class="flex align-items-center justify-content-center text-center">
+    <div class="tarjeta flex align-items-center justify-content-center text-center">
       <pv-card style="width: 25rem; overflow: hidden">
         <template #title>Programación de Citas</template>
         <template #content>
@@ -19,12 +19,12 @@
         </template>
         <template #footer>
           <div class="flex gap-4 mt-1">
-            <pv-button label="Programar cita" class="w-full" />
+            <pv-button label="Programar cita" class="pvbutton w-full" />
           </div>
         </template>
       </pv-card>
     </div>
-    <div class="flex align-items-center justify-content-center text-center">
+    <div class="tarjeta flex align-items-center justify-content-center text-center">
       <pv-card style="width: 25rem; overflow: hidden">
         <template #title>Servicios a domicilio</template>
         <template #content>
@@ -35,12 +35,12 @@
         </template>
         <template #footer>
           <div class="flex gap-4 mt-1">
-            <pv-button label="Servicio a Domicilio" class="w-full" />
+            <pv-button label="Servicio a Domicilio" class="pvbutton w-full" />
           </div>
         </template>
       </pv-card>
     </div>
-    <div class="flex align-items-center justify-content-center text-center">
+    <div class="tarjeta flex align-items-center justify-content-center text-center py-4">
       <pv-card style="width: 25rem; overflow: hidden">
         <template #title>Historial Médico</template>
         <template #content>
@@ -51,7 +51,7 @@
         </template>
         <template #footer>
           <div class="flex gap-4 mt-1">
-            <pv-button label="Historial Médico" class="w-full" />
+            <pv-button label="Historial Médico" class="pvbutton w-full" />
           </div>
         </template>
       </pv-card>
@@ -60,11 +60,30 @@
 </template>
 
 <style scoped>
-h1{
+.header{
   color : #376eec;
+}
+
+.header p {
+  color: black;
 }
 .small-image {
   width: 200px; /* Adjust the width as needed */
   height: auto; /* Maintain aspect ratio */
+}
+.pvbutton {
+  padding: 10px 20px;
+  border: 2px solid #007bff; /* Marco alrededor del botón */
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; /* Transición suave */
+}
+.tarjeta {
+  background-color: white;
+  border-radius: 8px;
+  padding-right: 8px;
+  padding-left: 8px;
 }
 </style>
