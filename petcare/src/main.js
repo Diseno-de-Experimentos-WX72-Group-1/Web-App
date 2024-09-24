@@ -1,7 +1,7 @@
 import './assets/main.css'
 import 'primeflex/primeflex.css';
 import 'primeicons/primeicons.css'
-import VueMq from 'vue3-mq'
+import Aura from '@primevue/themes/aura';
 
 import { createApp } from 'vue'
 import App from './App.vue'
@@ -18,16 +18,12 @@ import router from "@/router/index.js";
 
 const app = createApp(App);
 
-app.use(VueMq, {
-    breakpoints: {
-        sm: 640,
-        md: 768,
-        lg: Infinity
-    },
-    defaultBreakpoint: 'sm',
+app.use(PrimeVue, {
+    theme: {
+        preset: Aura
+    }
 });
 
-app.use(PrimeVue);
 app.use(router)
 
 app.component('pv-button',Button)
