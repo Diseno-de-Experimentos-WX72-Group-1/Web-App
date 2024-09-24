@@ -5,8 +5,8 @@ import LoginVeterinarianComponent from "@/core/public/components/login-veterinar
 import LoginUserComponent from "@/core/public/components/login-user-component.vue";
 import SignupComponent from "@/core/public/components/signup-component.vue";
 import MainHomeComponent from "@/core/public/components/main-home-component.vue";
-import UserDash from '@/user/components/user-dash.component.vue'
-import TheAppointment from '@/Appointment/Components/the-appointment.component.vue'
+import UserDash from '@/core/public/components/user-dash.component.vue'
+import TheAppointment from '@/core/Appointment/Components/the-appointment.component.vue'
 
 
 const routes = [
