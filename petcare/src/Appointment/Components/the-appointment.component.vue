@@ -122,14 +122,4 @@ h1 {
   padding-right: 8px;
   padding-left: 8px;
 }
-
-.pvbutton {
-  padding: 10px 20px;
-  border: 2px solid #007bff; /* Marco alrededor del botón */
-  border-radius: 4px;
-  background-color: #007bff;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s; /* Transición suave */
-}
 </style>

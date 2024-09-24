@@ -18,9 +18,9 @@
           </p>
         </template>
         <template #footer>
-          <div class="flex gap-4 mt-1">
-              <pv-button label="Programar cita" class="pvbutton w-full" />
-          </div>
+          <RouterLink to="appointment" class="flex gap-4 mt-1">
+            <pv-button label="Programar cita" class="pvbutton w-full" />
+          </RouterLink>
         </template>
       </pv-card>
     </div>
