@@ -112,8 +112,8 @@ h1 {
   color: #3b82f6;
 }
 .small-image {
-  width: 300px; /* Adjust the width as needed */
-  height: auto; /* Maintain aspect ratio */
+  width: 300px; 
+  height: auto;
 }
 
 .tarjeta {

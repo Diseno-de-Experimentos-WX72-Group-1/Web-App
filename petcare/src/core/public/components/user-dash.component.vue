@@ -68,16 +68,16 @@
   color: black;
 }
 .small-image {
-  width: 200px; /* Adjust the width as needed */
-  height: auto; /* Maintain aspect ratio */
+  width: 200px;
+  height: auto;
 }
 .pvbutton {
   padding: 10px 20px;
-  border: 2px solid #007bff; /* Marco alrededor del botón */
+  border: 2px solid #007bff;
   border-radius: 4px;
   background-color: #007bff;
   color: white;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s; /* Transición suave */
+  transition: background-color 0.3s, color 0.3s;
 }
 </style>
