@@ -34,9 +34,9 @@
           </p>
         </template>
         <template #footer>
-          <div class="flex gap-4 mt-1">
+          <RouterLink to="home-services" class="flex gap-4 mt-1">
               <pv-button label="Servicio a Domicilio" class="pvbutton w-full" />
-          </div>
+          </RouterLink>
         </template>
       </pv-card>
     </div>
@@ -79,11 +79,5 @@
   color: white;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s; /* Transición suave */
-}
-.tarjeta {
-  background-color: white;
-  border-radius: 8px;
-  padding-right: 8px;
-  padding-left: 8px;
 }
 </style>

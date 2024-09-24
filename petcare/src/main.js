@@ -13,6 +13,8 @@ import InputText from "primevue/inputtext";
 import InputMask from 'primevue/inputmask'
 import Select from "primevue/select";
 import Card from 'primevue/card';
+import Textarea from 'primevue/textarea';
+
 
 import router from "@/router/index.js";
 
@@ -50,5 +52,6 @@ app.component('pv-input-text', InputText)
 app.component('pv-input-mask', InputMask)
 app.component('pv-select', Select)
 app.component('pv-card', Card);
+app.component('pv-textarea', Textarea);
 
 app.mount('#app')

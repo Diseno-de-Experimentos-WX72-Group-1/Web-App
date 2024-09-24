@@ -7,6 +7,7 @@ import SignupComponent from "@/core/public/components/signup-component.vue";
 import MainHomeComponent from "@/core/public/components/main-home-component.vue";
 import UserDash from '@/core/public/components/user-dash.component.vue'
 import TheAppointment from '@/core/Appointment/Components/the-appointment.component.vue'
+import TheHomeServices from '@/core/home-service/components/the-home-services.component.vue'
 
 
 const routes = [
@@ -17,7 +18,8 @@ const routes = [
     { path: '/signup', component: SignupComponent},
     { path: '/:pathMatch(.*)*', component: NotFoundComponent },
     { path: '/user-dashboard', component: UserDash},
-    { path: '/appointment', component: TheAppointment}
+    { path: '/appointment', component: TheAppointment},
+    { path: '/home-services', component: TheHomeServices}
 ]
 
 const router = createRouter({
