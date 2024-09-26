@@ -48,7 +48,7 @@
     methods: {
       async generarReporte() {
         try {
-          const response = await axios.post('https://java3000-g8cthucjhvgad2c3.canadacentral-01.azurewebsites.net/api/reportes/generar', {
+          const response = await axios.post('https://petandcareapi-bhbgcngtfkbufvfy.canadacentral-01.azurewebsites.net/api/reportes/generar', {
             idCita: this.idCita,
             resumen: this.resumen,
             

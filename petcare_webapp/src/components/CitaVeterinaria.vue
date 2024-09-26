@@ -71,7 +71,7 @@ export default {
           veterinario: { id: this.cita.idVeterinario }
         };
 
-        const response = await axios.post('https://java3000-g8cthucjhvgad2c3.canadacentral-01.azurewebsites.net/api/citas/programar', citaConMascota);
+        const response = await axios.post('https://petandcareapi-bhbgcngtfkbufvfy.canadacentral-01.azurewebsites.net/api/citas/programar', citaConMascota);
         this.mensaje = 'Cita programada exitosamente: ' + response.data.id;
 
         // Reiniciar el formulario
@@ -95,11 +95,11 @@ export default {
     async cargarDatos() {
       try {
         // Obtener mascotas
-        const responseMascotas = await axios.get('https://java3000-g8cthucjhvgad2c3.canadacentral-01.azurewebsites.net/api/citas/mascotas');
+        const responseMascotas = await axios.get('https://petandcareapi-bhbgcngtfkbufvfy.canadacentral-01.azurewebsites.net/api/citas/mascotas');
         this.mascotas = responseMascotas.data;
 
         // Obtener veterinarios con rol de veterinario
-        const responseVeterinarios = await axios.get('https://java3000-g8cthucjhvgad2c3.canadacentral-01.azurewebsites.net/api/citas/usuarios/veterinarios');
+        const responseVeterinarios = await axios.get('https://petandcareapi-bhbgcngtfkbufvfy.canadacentral-01.azurewebsites.net/api/citas/usuarios/veterinarios');
         this.veterinarios = responseVeterinarios.data;
       } catch (error) {
         console.error('Error cargando datos: ', error);

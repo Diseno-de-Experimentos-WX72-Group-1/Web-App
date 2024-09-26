@@ -192,7 +192,7 @@ export default {
   methods: {
     async obtenerServicios() {
       try {
-        const response = await axios.get('https://java3000-g8cthucjhvgad2c3.canadacentral-01.azurewebsites.net/api/servicios-domicilio');
+        const response = await axios.get('https://petandcareapi-bhbgcngtfkbufvfy.canadacentral-01.azurewebsites.net/api/servicios-domicilio');
         this.servicios = response.data;
       } catch (error) {
         this.mensaje = 'Error al obtener servicios: ' + error.message;
@@ -201,10 +201,10 @@ export default {
     async guardarServicio() {
       try {
         if (this.isEditing) {
-          await axios.put(`https://java3000-g8cthucjhvgad2c3.canadacentral-01.azurewebsites.net/api/servicios-domicilio/${this.servicio.idServicio}`, this.servicio);
+          await axios.put(`https://petandcareapi-bhbgcngtfkbufvfy.canadacentral-01.azurewebsites.net/api/servicios-domicilio/${this.servicio.idServicio}`, this.servicio);
           this.mensaje = 'Servicio actualizado correctamente.';
         } else {
-          await axios.post('https://java3000-g8cthucjhvgad2c3.canadacentral-01.azurewebsites.net/api/servicios-domicilio', this.servicio);
+          await axios.post('https://petandcareapi-bhbgcngtfkbufvfy.canadacentral-01.azurewebsites.net/api/servicios-domicilio', this.servicio);
           this.mensaje = 'Servicio solicitado correctamente.';
         }
         this.limpiarFormulario();
@@ -219,7 +219,7 @@ export default {
     },
     async cancelarServicio(id) {
       try {
-        await axios.delete(`https://java3000-g8cthucjhvgad2c3.canadacentral-01.azurewebsites.net/api/servicios-domicilio/${id}`);
+        await axios.delete(`https://petandcareapi-bhbgcngtfkbufvfy.canadacentral-01.azurewebsites.net/api/servicios-domicilio/${id}`);
         this.mensaje = 'Servicio cancelado correctamente.';
         this.obtenerServicios();
       } catch (error) {

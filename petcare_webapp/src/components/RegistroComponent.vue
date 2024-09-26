@@ -74,7 +74,7 @@ export default {
   methods: {
     async registrarUsuario() {
       try {
-        const response = await axios.post('https://java3000-g8cthucjhvgad2c3.canadacentral-01.azurewebsites.net/api/usuarios/registrar', {
+        const response = await axios.post('https://petandcareapi-bhbgcngtfkbufvfy.canadacentral-01.azurewebsites.net/api/usuarios/registrar', {
           nombre: this.nombre,
           correo: this.correo,
           rol: this.rol,

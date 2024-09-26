@@ -168,7 +168,7 @@ export default {
   methods: {
     async obtenerUsuarios() {
       try {
-        const response = await axios.get("https://java3000-g8cthucjhvgad2c3.canadacentral-01.azurewebsites.net/api/usuarios");
+        const response = await axios.get("http://localhost:8080/api/usuarios");
         this.usuarios = response.data;
       } catch (error) {
         this.mensaje = "Error al obtener usuarios: " + error.message;
@@ -178,13 +178,13 @@ export default {
       try {
         if (this.isEditing) {
           await axios.put(
-            `https://java3000-g8cthucjhvgad2c3.canadacentral-01.azurewebsites.net/api/usuarios/${this.usuario.id}`,
+            `http://localhost:8080/api/usuarios/${this.usuario.id}`,
             this.usuario
           );
           this.mensaje = "Usuario actualizado exitosamente";
         } else {
           const response = await axios.post(
-            "https://java3000-g8cthucjhvgad2c3.canadacentral-01.azurewebsites.net/api/usuarios",
+            "https://petandcareapi-bhbgcngtfkbufvfy.canadacentral-01.azurewebsites.net/api/usuarios",
             this.usuario
           );
           this.mensaje = "Usuario creado exitosamente: " + response.data.id;
@@ -204,7 +204,7 @@ export default {
     },
     async eliminarUsuario(id) {
       try {
-        await axios.delete(`https://java3000-g8cthucjhvgad2c3.canadacentral-01.azurewebsites.net/api/usuarios/${id}`);
+        await axios.delete(`https://petandcareapi-bhbgcngtfkbufvfy.canadacentral-01.azurewebsites.net/api/usuarios/${id}`);
         this.mensaje = "Usuario eliminado exitosamente";
         this.obtenerUsuarios();
       } catch (error) {

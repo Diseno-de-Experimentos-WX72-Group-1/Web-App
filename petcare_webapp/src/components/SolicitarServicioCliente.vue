@@ -61,7 +61,7 @@
     methods: {
       async cargarMascotas() {
         try {
-          const response = await axios.get('https://java3000-g8cthucjhvgad2c3.canadacentral-01.azurewebsites.net/api/mascotas');
+          const response = await axios.get('https://petandcareapi-bhbgcngtfkbufvfy.canadacentral-01.azurewebsites.net/api/mascotas');
           this.mascotas = response.data;
         } catch (error) {
           this.mensaje = 'Error al obtener mascotas: ' + error.message;
@@ -69,7 +69,7 @@
       },
       async cargarVeterinarios() {
         try {
-          const responseVeterinarios = await axios.get('https://java3000-g8cthucjhvgad2c3.canadacentral-01.azurewebsites.net/api/citas/usuarios/veterinarios');
+          const responseVeterinarios = await axios.get('https://petandcareapi-bhbgcngtfkbufvfy.canadacentral-01.azurewebsites.net/api/citas/usuarios/veterinarios');
           this.veterinarios = responseVeterinarios.data;
         } catch (error) {
           this.mensaje = 'Error al obtener veterinarios: ' + error.message;
@@ -77,7 +77,7 @@
       },
       async guardarServicio() {
         try {
-          const response = await axios.post('https://java3000-g8cthucjhvgad2c3.canadacentral-01.azurewebsites.net/api/servicios-domicilio', this.servicio);
+          const response = await axios.post('https://petandcareapi-bhbgcngtfkbufvfy.canadacentral-01.azurewebsites.net/api/servicios-domicilio', this.servicio);
           this.mensaje = 'Su solicitud ha sido procesada y pronto el especialista estará en su hogar';
           console.log(response); // Verifica la respuesta
           this.resetForm();
