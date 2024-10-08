@@ -168,7 +168,7 @@ export default {
   methods: {
     async obtenerUsuarios() {
       try {
-        const response = await axios.get("http://localhost:8080/api/usuarios");
+        const response = await axios.get("https://petandcareapi-bhbgcngtfkbufvfy.canadacentral-01.azurewebsites.net/api/usuarios");
         this.usuarios = response.data;
       } catch (error) {
         this.mensaje = "Error al obtener usuarios: " + error.message;
@@ -178,7 +178,7 @@ export default {
       try {
         if (this.isEditing) {
           await axios.put(
-            `http://localhost:8080/api/usuarios/${this.usuario.id}`,
+            `https://petandcareapi-bhbgcngtfkbufvfy.canadacentral-01.azurewebsites.net/api/usuarios/${this.usuario.id}`,
             this.usuario
           );
           this.mensaje = "Usuario actualizado exitosamente";

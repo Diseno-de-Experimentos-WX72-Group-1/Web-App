@@ -112,7 +112,7 @@
     methods: {
       async obtenerUsuarios() {
         try {
-          const response = await axios.get("http://localhost:8080/api/usuarios");
+          const response = await axios.get("https://petandcareapi-bhbgcngtfkbufvfy.canadacentral-01.azurewebsites.net/api/usuarios");
           this.usuarios = response.data;
         } catch (error) {
           this.mensaje = "Error al obtener usuarios: " + error.message;
@@ -122,13 +122,13 @@
         try {
           if (this.isEditing) {
             await axios.put(
-              `http://localhost:8080/${this.usuario.id}`,
+              `https://petandcareapi-bhbgcngtfkbufvfy.canadacentral-01.azurewebsites.net/${this.usuario.id}`,
               this.usuario
             );
             this.mensaje = "Usuario actualizado exitosamente";
           } else {
             const response = await axios.post(
-              "http://localhost:8080/",
+              "https://petandcareapi-bhbgcngtfkbufvfy.canadacentral-01.azurewebsites.net/",
               this.usuario
             );
             this.mensaje = "Usuario creado exitosamente: " + response.data.id;
@@ -148,7 +148,7 @@
       },
       async eliminarUsuario(id) {
         try {
-          await axios.delete(`http://localhost:8080/${id}`);
+          await axios.delete(`https://petandcareapi-bhbgcngtfkbufvfy.canadacentral-01.azurewebsites.net/${id}`);
           this.mensaje = "Usuario eliminado exitosamente";
           this.obtenerUsuarios();
         } catch (error) {
