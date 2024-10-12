@@ -120,7 +120,7 @@ export default {
     },
     async obtenerServicios() {
       try {
-        const response = await axios.get('https://java3000-g8cthucjhvgad2c3.canadacentral-01.azurewebsites.net/api/servicios-domicilio');
+        const response = await axios.get('https://petandcareapi-bhbgcngtfkbufvfy.canadacentral-01.azurewebsites.net/api/servicios-domicilio');
         const userId = this.$route.params.id; // Asegúrate de que userId es un número
         // Filtra los servicios para mostrar solo los del veterinario correspondiente
         this.servicios = response.data.filter(servicio => servicio.veterinario.id === Number(userId));
@@ -131,7 +131,7 @@ export default {
     async obtenerNombreVeterinario() {
       try {
         const userId = this.$route.params.id; // Obtener el ID del veterinario desde los parámetros de la ruta
-        const response = await axios.get(`https://java3000-g8cthucjhvgad2c3.canadacentral-01.azurewebsites.net/api/veterinarios/${userId}`);
+        const response = await axios.get(`https://petandcareapi-bhbgcngtfkbufvfy.canadacentral-01.azurewebsites.net/api/veterinarios/${userId}`);
         this.veterinarioNombre = response.data.nombre; // Asumimos que el nombre está en la respuesta
       } catch (error) {
         console.error('Error al obtener el nombre del veterinario: ', error);
@@ -140,10 +140,10 @@ export default {
     async guardarServicio() {
       try {
         if (this.isEditing) {
-          await axios.put(`https://java3000-g8cthucjhvgad2c3.canadacentral-01.azurewebsites.net/api/servicios-domicilio/${this.servicio.idServicio}`, this.servicio);
+          await axios.put(`https://petandcareapi-bhbgcngtfkbufvfy.canadacentral-01.azurewebsites.net/api/servicios-domicilio/${this.servicio.idServicio}`, this.servicio);
           this.mensaje = 'Servicio actualizado exitosamente';
         } else {
-          const response = await axios.post('https://java3000-g8cthucjhvgad2c3.canadacentral-01.azurewebsites.net/api/servicios-domicilio', this.servicio);
+          const response = await axios.post('https://petandcareapi-bhbgcngtfkbufvfy.canadacentral-01.azurewebsites.net/api/servicios-domicilio', this.servicio);
           this.mensaje = 'Servicio solicitado exitosamente';
           console.log(response);
         }
@@ -159,7 +159,7 @@ export default {
     },
     async cancelarServicio(id) {
       try {
-        await axios.delete(`https://java3000-g8cthucjhvgad2c3.canadacentral-01.azurewebsites.net/api/servicios-domicilio/${id}`);
+        await axios.delete(`https://petandcareapi-bhbgcngtfkbufvfy.canadacentral-01.azurewebsites.net/api/servicios-domicilio/${id}`);
         this.mensaje = 'Servicio cancelado exitosamente';
         this.obtenerServicios(); // Refresca la lista
       } catch (error) {

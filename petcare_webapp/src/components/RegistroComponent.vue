@@ -74,7 +74,7 @@ export default {
   methods: {
     async registrarUsuario() {
       try {
-        const response = await axios.post('https://java3000-g8cthucjhvgad2c3.canadacentral-01.azurewebsites.net/api/usuarios/registrar', {
+        const response = await axios.post('https://petandcareapi-bhbgcngtfkbufvfy.canadacentral-01.azurewebsites.net/api/usuarios/registrar', {
           nombre: this.nombre,
           correo: this.correo,
           rol: this.rol,
@@ -83,13 +83,17 @@ export default {
         console.log(response.data);
         const userId = response.data.id;
         const userName = response.data.nombre;
-        this.$router.push({ name: 'DashboardCliente', params: { id: userId, nombre: userName} });
+        if (this.rol === 'veterinario') {
+          this.$router.push({ name: 'DashboardVeterinario', params: { id: userId, nombre: userName } });
+        } else {
+          this.$router.push({ name: 'DashboardCliente', params: { id: userId, nombre: userName } });
+        }
       } catch (error) {
         console.error(error);
         this.mensaje = 'Error al registrar: ' + (error.response?.data || error.message);
       }
     },
-  },
+  }
 };
 </script>
 

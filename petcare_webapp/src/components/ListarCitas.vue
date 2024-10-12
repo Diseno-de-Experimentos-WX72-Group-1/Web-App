@@ -88,7 +88,7 @@ export default {
   methods: {
     async obtenerCitas() {
       try {
-        const response = await axios.get('https://java3000-g8cthucjhvgad2c3.canadacentral-01.azurewebsites.net/api/citas');
+        const response = await axios.get('https://petandcareapi-bhbgcngtfkbufvfy.canadacentral-01.azurewebsites.net/api/citas');
         this.citas = response.data;
       } catch (error) {
         this.mensaje = 'Error al obtener citas: ' + error.message;
@@ -97,10 +97,10 @@ export default {
     async guardarCita() {
       try {
         if (this.isEditing) {
-          await axios.put(`https://java3000-g8cthucjhvgad2c3.canadacentral-01.azurewebsites.net/api/citas/${this.cita.id}`, this.cita);
+          await axios.put(`https://petandcareapi-bhbgcngtfkbufvfy.canadacentral-01.azurewebsites.net/api/citas/${this.cita.id}`, this.cita);
           this.mensaje = 'Cita actualizada exitosamente';
         } else {
-          const response = await axios.post('https://java3000-g8cthucjhvgad2c3.canadacentral-01.azurewebsites.net/api/citas/programar', this.cita);
+          const response = await axios.post('https://petandcareapi-bhbgcngtfkbufvfy.canadacentral-01.azurewebsites.net/api/citas/programar', this.cita);
           this.mensaje = 'Cita programada exitosamente: ' + response.data.id;
         }
 
