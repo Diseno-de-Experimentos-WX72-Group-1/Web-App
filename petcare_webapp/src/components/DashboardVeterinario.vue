@@ -4,10 +4,6 @@
     <div class="alert alert-info" v-if="veterinarioNombre">
       ¡Hola, Dr(a). {{ veterinarioNombre }}! ¿Cómo podemos ayudarle hoy?
     </div>
-    
-    <button @click="irADescripcion" class="btn btn-primary mb-4">
-      Consultar Historial Médico
-    </button>
 
     <form @submit.prevent="guardarServicio" class="mb-4">
       <div class="mb-3">
@@ -114,10 +110,6 @@ export default {
     this.obtenerNombreVeterinario(); // Cargar el nombre del veterinario al crear el componente
   },
   methods: {
-    irADescripcion() {
-      // Redirige a la vista de descripción
-      this.$router.push({ name: 'VeterinarioConsulta2' });
-    },
     async obtenerServicios() {
       try {
         const response = await axios.get('https://petandcareapi-bhbgcngtfkbufvfy.canadacentral-01.azurewebsites.net/api/servicios-domicilio');
