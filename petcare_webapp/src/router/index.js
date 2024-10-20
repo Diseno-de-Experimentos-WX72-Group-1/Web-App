@@ -18,6 +18,7 @@ import MascotasList from '@/components/MascotasList.vue';
 import SolicitarServicioCliente from '@/components/SolicitarServicioCliente.vue';
 import DashboardVeterinario from '@/components/DashboardVeterinario.vue';
 import VeterinarioConsula from '@/components/VeterinarioConsula.vue';
+import DashboardServicioADomicilio from "@/components/DashboardServicioADomicilio.vue";
 
 const routes = [
 
@@ -59,8 +60,8 @@ const routes = [
     component: UsuarioCita,
   },
   {
-    path: '/servicio_domicilio',
-    name: 'ServicioDomicilio',
+    path: '/servicio_domicilio-admin',
+    name: 'ServicioDomicilioAdmin',
     component: ServicioDomicilio,
   },
   {
@@ -125,6 +126,11 @@ const routes = [
     path: '/dashboard_veterinario/:id',
     name: 'DashboardVeterinario',
     component: DashboardVeterinario, // Asegúrate de importar este componente
+  },
+  {
+    path: '/servicio_domicilio',
+    name: 'ServicioDomicilio',
+    component: DashboardServicioADomicilio,
   },
 
   {
