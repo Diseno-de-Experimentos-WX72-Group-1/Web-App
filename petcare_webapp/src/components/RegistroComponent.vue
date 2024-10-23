@@ -83,13 +83,17 @@ export default {
         console.log(response.data);
         const userId = response.data.id;
         const userName = response.data.nombre;
-        this.$router.push({ name: 'DashboardCliente', params: { id: userId, nombre: userName} });
+        if (this.rol === 'veterinario') {
+          this.$router.push({ name: 'DashboardVeterinario', params: { id: userId, nombre: userName } });
+        } else {
+          this.$router.push({ name: 'DashboardCliente', params: { id: userId, nombre: userName } });
+        }
       } catch (error) {
         console.error(error);
         this.mensaje = 'Error al registrar: ' + (error.response?.data || error.message);
       }
     },
-  },
+  }
 };
 </script>
 

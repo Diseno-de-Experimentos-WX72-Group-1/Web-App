@@ -2,15 +2,14 @@ import { createRouter, createWebHistory } from 'vue-router';
 import RegistroComponent from '../components/RegistroComponent.vue';
 import LoginComponent from '../components/LoginComponent.vue';
 import UsuariosComponent from '../components/UsuariosComponent.vue';
-import CitaVeterinaria from '../components/CitaVeterinaria.vue'; // Asegúrate de importar este componente
+import CitaVeterinaria from '../components/CitaVeterinaria.vue';
 import ListarCitas from '@/components/ListarCitas.vue';
 import ServicioDomicilio from '@/components/ServicioDomicilio.vue';
 import HistorialMedico from '@/components/HistorialMedico.vue';
 import GenerarReporte from '@/components/GenerarReporte.vue';
-
 import ListaRecordatorios from '@/components/ListaRecordatorios.vue';
 import InicioPet from '@/components/InicioPet.vue';
-import DassboardCita from '@/components/DassboardCita.vue';
+import DashboardCita from '@/components/DashboardCita.vue';
 import UsuarioCita from '@/components/UsuarioCita.vue';
 import ReporteUnico from '@/components/ReporteUnico.vue';
 import DashboardCliente from '@/components/DashboardCliente.vue';
@@ -18,10 +17,9 @@ import MascotasList from '@/components/MascotasList.vue';
 import SolicitarServicioCliente from '@/components/SolicitarServicioCliente.vue';
 import DashboardVeterinario from '@/components/DashboardVeterinario.vue';
 import VeterinarioConsula from '@/components/VeterinarioConsula.vue';
+import DashboardServicioADomicilio from "@/components/DashboardServicioADomicilio.vue";
 
 const routes = [
-
- 
   {
     path: '/registro',
     name: 'Registro',
@@ -52,15 +50,14 @@ const routes = [
     name: 'CitaVeterinaria',
     component: CitaVeterinaria,
   },
-
   {
     path: '/usuario_cita',
     name: 'UsuarioCita',
     component: UsuarioCita,
   },
   {
-    path: '/servicio_domicilio',
-    name: 'ServicioDomicilio',
+    path: '/servicio_domicilio-admin',
+    name: 'ServicioDomicilioAdmin',
     component: ServicioDomicilio,
   },
   {
@@ -83,61 +80,70 @@ const routes = [
     name: 'Lista_Recordatorios',
     component: ListaRecordatorios,
   },
-
   {
     path: '/dashboard',
-    name: 'DassboardCiita',
-    component: DassboardCita,
+    name: 'DashboardCita',
+    component: DashboardCita,
   },
-
   {
     path: '/mascotas',
     name: 'Mascotas',
     component: MascotasList,
   },
-
   {
-    path: '/mascotas/:id', // Ruta para la vista de descripción con un parámetro de ID
+    path: '/mascotas/:id',
     name: 'mascotasusuario',
     component: MascotasList,
   },
-
   {
-    path: '/solicitar/:id', // Ruta para la vista de descripción con un parámetro de ID
+    path: '/solicitar/:id',
     name: 'solicitarserviciocliente',
     component: SolicitarServicioCliente,
   },
-
-
   {
     path: '/reporte/:idCita',
     name: 'reporte',
-    component: ReporteUnico // Componente donde se generará el reporte
+    component: ReporteUnico,
   },
-
   {
     path: '/dashboard_cliente/:id',
     name: 'DashboardCliente',
-    component: DashboardCliente, // Asegúrate de importar este componente
+    component: DashboardCliente,
   },
-
   {
     path: '/dashboard_veterinario/:id',
     name: 'DashboardVeterinario',
-    component: DashboardVeterinario, // Asegúrate de importar este componente
+    component: DashboardVeterinario,
+    meta: { requiresAuth: true, role: 'veterinario' }, // Añadir meta con rol
   },
-
   {
-    path: '/', // Ruta por defecto
-    redirect: '/login', // Redirige a la página de registro
+    path: '/servicio_domicilio',
+    name: 'ServicioDomicilio',
+    component: DashboardServicioADomicilio,
   },
-
-
+  {
+    path: '/',
+    redirect: '/login', // Redirige a la página de login
+  },
 ];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
+});
+
+router.beforeEach((to, from, next) => {
+  const user = JSON.parse(localStorage.getItem("usuario")); // Simula autenticación
+
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+    if (user && user.rol === to.meta.role) {
+      next();
+    } else {
+      next("/"); // Redirigir si no tiene permiso
+    }
+  } else {
+    next();
+  }
 });
 
 export default router;

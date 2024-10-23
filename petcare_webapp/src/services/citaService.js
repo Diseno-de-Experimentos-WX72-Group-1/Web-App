@@ -17,6 +17,11 @@ const citaService = {
   // Función para obtener la lista de veterinarios
   async obtenerVeterinarios() {
     return axios.get(`${API_URL}/veterinarios`); // Asegúrate de que este endpoint esté definido en el backend
+  },
+
+  // Nueva función para obtener las citas
+  async obtenerCitas() {
+    return axios.get(`${API_URL}`); // Este endpoint debe devolver la lista de citas
   }
 };
 
