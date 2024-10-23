@@ -9,15 +9,15 @@ import HistorialMedico from '@/components/HistorialMedico.vue';
 import GenerarReporte from '@/components/GenerarReporte.vue';
 import ListaRecordatorios from '@/components/ListaRecordatorios.vue';
 import InicioPet from '@/components/InicioPet.vue';
-import DashboardCita from '@/components/DashboardCita.vue';
+import DassboardCita from '@/components/DassboardCita.vue';
 import UsuarioCita from '@/components/UsuarioCita.vue';
 import ReporteUnico from '@/components/ReporteUnico.vue';
 import DashboardCliente from '@/components/DashboardCliente.vue';
 import MascotasList from '@/components/MascotasList.vue';
 import SolicitarServicioCliente from '@/components/SolicitarServicioCliente.vue';
-import DashboardVeterinario from '@/components/DashboardVeterinario.vue';
 import VeterinarioConsula from '@/components/VeterinarioConsula.vue';
 import DashboardServicioADomicilio from "@/components/DashboardServicioADomicilio.vue";
+import CitasVeterinario from "@/components/CitasVeterinario.vue";
 
 const routes = [
   {
@@ -82,8 +82,8 @@ const routes = [
   },
   {
     path: '/dashboard',
-    name: 'DashboardCita',
-    component: DashboardCita,
+    name: 'DassboardCiita',
+    component: DassboardCita,
   },
   {
     path: '/mascotas',
@@ -113,13 +113,12 @@ const routes = [
   {
     path: '/dashboard_veterinario/:id',
     name: 'DashboardVeterinario',
-    component: DashboardVeterinario,
-    meta: { requiresAuth: true, role: 'veterinario' }, // Añadir meta con rol
+    component: DashboardServicioADomicilio
   },
   {
-    path: '/servicio_domicilio',
-    name: 'ServicioDomicilio',
-    component: DashboardServicioADomicilio,
+    path: '/citas_veterinario/:id',
+    name: 'CitasVeterinario',
+    component: CitasVeterinario
   },
   {
     path: '/',
@@ -132,7 +131,7 @@ const router = createRouter({
   routes,
 });
 
-router.beforeEach((to, from, next) => {
+/*router.beforeEach((to, from, next) => {
   const user = JSON.parse(localStorage.getItem("usuario")); // Simula autenticación
 
   if (to.matched.some(record => record.meta.requiresAuth)) {
@@ -144,6 +143,6 @@ router.beforeEach((to, from, next) => {
   } else {
     next();
   }
-});
+});*/
 
 export default router;

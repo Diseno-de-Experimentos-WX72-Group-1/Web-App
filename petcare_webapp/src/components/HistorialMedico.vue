@@ -184,7 +184,7 @@ export default {
         return;
       }
       try {
-        const response = await axios.get(`https://java3000-g8cthucjhvgad2c3.canadacentral-01.azurewebsites.net/api/historial-medico/mascota/${this.idMascota}`);
+        const response = await axios.get(`https://petandcareapi-bhbgcngtfkbufvfy.canadacentral-01.azurewebsites.net/api/historial-medico/mascota/${this.idMascota}`);
         this.historial = response.data;
         if (this.historial.length === 0) {
           this.mensaje = 'No se encontró historial médico para esta mascota.';

@@ -93,7 +93,7 @@ export default {
         this.mensaje = 'Error al registrar: ' + (error.response?.data || error.message);
       }
     },
-  }
+  },
 };
 </script>
 
