@@ -5,6 +5,6 @@ module.exports = defineConfig({
 module.exports = {
   
   devServer: {
-    proxy: 'https://petandcareapi-bhbgcngtfkbufvfy.canadacentral-01.azurewebsites.net'
+    proxy: 'https://petcare-fcaze8atc5cpdte0.canadacentral-01.azurewebsites.net'
   }
 };
