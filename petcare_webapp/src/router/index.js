@@ -128,7 +128,7 @@ const routes = [
     component: DashboardVeterinario, // Asegúrate de importar este componente
   },
   {
-    path: '/servicio_domicilio',
+    path: '/servicio_domicilio/:id',
     name: 'ServicioDomicilio',
     component: DashboardServicioADomicilio,
   },

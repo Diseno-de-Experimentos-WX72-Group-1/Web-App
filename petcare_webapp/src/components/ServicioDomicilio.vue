@@ -193,7 +193,8 @@ export default {
     async obtenerServicios() {
       try {
         const response = await axios.get('https://petcare-fcaze8atc5cpdte0.canadacentral-01.azurewebsites.net/api/servicios-domicilio');
-        this.servicios = response.data;
+        const userId = this.$route.params.id || 1;
+        this.servicios = response.data.filter(servicio => servicio.veterinario.id === Number(userId));
       } catch (error) {
         this.mensaje = 'Error al obtener servicios: ' + error.message;
       }
@@ -201,7 +202,7 @@ export default {
     async guardarServicio() {
       try {
         if (this.isEditing) {
-          await axios.put(`hhttps://petcare-fcaze8atc5cpdte0.canadacentral-01.azurewebsites.net/api/servicios-domicilio/${this.servicio.idServicio}`, this.servicio);
+          await axios.put(`https://petcare-fcaze8atc5cpdte0.canadacentral-01.azurewebsites.net/api/servicios-domicilio/${this.servicio.idServicio}`, this.servicio);
           this.mensaje = 'Servicio actualizado correctamente.';
         } else {
           await axios.post('https://petcare-fcaze8atc5cpdte0.canadacentral-01.azurewebsites.net/api/servicios-domicilio', this.servicio);
