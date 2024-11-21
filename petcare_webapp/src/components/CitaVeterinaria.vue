@@ -71,7 +71,7 @@ export default {
           veterinario: { id: this.cita.idVeterinario }
         };
 
-        const response = await axios.post('https://java3000-g8cthucjhvgad2c3.canadacentral-01.azurewebsites.net/api/citas/programar', citaConMascota);
+        const response = await axios.post('https://petandcareapi-bhbgcngtfkbufvfy.canadacentral-01.azurewebsites.net/api/citas/programar', citaConMascota);
         this.mensaje = 'Cita programada exitosamente: ' + response.data.id;
 
         // Reiniciar el formulario

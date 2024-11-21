@@ -148,7 +148,7 @@ export default {
   methods: {
     async obtenerRecordatorios() {
       try {
-        const response = await axios.get('https://java3000-g8cthucjhvgad2c3.canadacentral-01.azurewebsites.net/api/recordatorios/1'); // 1 sería el id de la mascota actual
+        const response = await axios.get('https://petandcareapi-bhbgcngtfkbufvfy.canadacentral-01.azurewebsites.net/api/recordatorios/1'); // 1 sería el id de la mascota actual
         this.recordatorios = response.data;
       } catch (error) {
         console.error('Error al obtener recordatorios:', error);
