@@ -70,7 +70,7 @@ export default {
         }
         
       } catch (error) {
-        this.mensaje = 'Error al iniciar sesión: ' + (error.response?.data || error.message);
+        this.mensaje = 'Error al iniciar sesión: ' + JSON.stringify(error.response?.data || error.message);
       }
     },
   },
