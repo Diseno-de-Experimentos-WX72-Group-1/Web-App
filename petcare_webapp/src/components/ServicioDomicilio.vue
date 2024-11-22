@@ -192,7 +192,7 @@ export default {
   methods: {
     async obtenerServicios() {
       try {
-        const response = await axios.get('https://petcare-fcaze8atc5cpdte0.canadacentral-01.azurewebsites.net/api/servicios-domicilio');
+        const response = await axios.get('https://api-production-edcf.up.railway.app/api/servicios-domicilio');
         const userId = this.$route.params.id || 1;
         this.servicios = response.data.filter(servicio => servicio.veterinario.id === Number(userId));
       } catch (error) {
@@ -202,10 +202,10 @@ export default {
     async guardarServicio() {
       try {
         if (this.isEditing) {
-          await axios.put(`https://petcare-fcaze8atc5cpdte0.canadacentral-01.azurewebsites.net/api/servicios-domicilio/${this.servicio.idServicio}`, this.servicio);
+          await axios.put(`https://api-production-edcf.up.railway.app/api/servicios-domicilio/${this.servicio.idServicio}`, this.servicio);
           this.mensaje = 'Servicio actualizado correctamente.';
         } else {
-          await axios.post('https://petcare-fcaze8atc5cpdte0.canadacentral-01.azurewebsites.net/api/servicios-domicilio', this.servicio);
+          await axios.post('https://api-production-edcf.up.railway.app/api/servicios-domicilio', this.servicio);
           this.mensaje = 'Servicio solicitado correctamente.';
         }
         this.limpiarFormulario();
@@ -220,7 +220,7 @@ export default {
     },
     async cancelarServicio(id) {
       try {
-        await axios.delete(`https://petcare-fcaze8atc5cpdte0.canadacentral-01.azurewebsites.net/api/servicios-domicilio/${id}`);
+        await axios.delete(`https://api-production-edcf.up.railway.app/api/servicios-domicilio/${id}`);
         this.mensaje = 'Servicio cancelado correctamente.';
         this.obtenerServicios();
       } catch (error) {

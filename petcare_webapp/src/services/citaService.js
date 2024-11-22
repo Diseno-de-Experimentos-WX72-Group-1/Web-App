@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Define la URL base de la API
-const API_URL = 'https://petcare-fcaze8atc5cpdte0.canadacentral-01.azurewebsites.net/api/citas';
+const API_URL = 'https://api-production-edcf.up.railway.app/api/citas';
 
 const citaService = {
   // Función para programar una nueva cita

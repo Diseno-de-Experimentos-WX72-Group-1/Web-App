@@ -60,7 +60,7 @@
             motivo: this.motivo,
           };
   
-          const response = await axios.post('https://petcare-fcaze8atc5cpdte0.canadacentral-01.azurewebsites.net/api/citas/programar', cita);
+          const response = await axios.post('https://api-production-edcf.up.railway.app/api/citas/programar', cita);
           console.log(response.data);
           alert('Cita programada exitosamente');
         } catch (error) {
@@ -70,7 +70,7 @@
       },
       async obtenerMascotas() {
         try {
-          const response = await axios.get('https://petcare-fcaze8atc5cpdte0.canadacentral-01.azurewebsites.net/api/mascotas');
+          const response = await axios.get('https://api-production-edcf.up.railway.app/api/mascotas');
           this.mascotas = response.data;
         } catch (error) {
           console.error('Error al obtener mascotas', error);
@@ -78,7 +78,7 @@
       },
       async obtenerVeterinarios() {
         try {
-          const response = await axios.get('https://petcare-fcaze8atc5cpdte0.canadacentral-01.azurewebsites.net/api/usuarios/veterinarios');
+          const response = await axios.get('https://api-production-edcf.up.railway.app/api/usuarios/veterinarios');
           this.veterinarios = response.data;
         } catch (error) {
           console.error('Error al obtener veterinarios', error);
