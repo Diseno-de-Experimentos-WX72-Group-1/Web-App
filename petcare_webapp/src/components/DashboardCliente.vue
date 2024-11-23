@@ -74,7 +74,7 @@ export default {
     },
     irAHistorial() {
       // Redirige a la vista de descripción pasando el userId
-      this.$router.push({ name: 'ListarCitas', params: { id: this.userId } });
+      this.$router.push({ name: 'ListarCitasUsuario', params: { id: this.userId } });
     },
   },
 };

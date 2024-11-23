@@ -19,6 +19,7 @@ import SolicitarServicioCliente from '@/components/SolicitarServicioCliente.vue'
 import DashboardVeterinario from '@/components/DashboardVeterinario.vue';
 import VeterinarioConsula from '@/components/VeterinarioConsula.vue';
 import DashboardServicioADomicilio from "@/components/DashboardServicioADomicilio.vue";
+import ListarCitasUsuario from "@/components/ListarCitasUsuario.vue";
 
 const routes = [
 
@@ -68,6 +69,11 @@ const routes = [
     path: '/listar_citas',
     name: 'ListarCitas',
     component: ListarCitas,
+  },
+  {
+    path: '/listar_citas_usuario/:id',
+    name: 'ListarCitasUsuario',
+    component: ListarCitasUsuario,
   },
   {
     path: '/historial_medico',
